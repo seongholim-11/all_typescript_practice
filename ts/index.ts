@@ -182,7 +182,7 @@ function 함수2() {}
 
 함수1(함수2); */
 
-type CutZero = (a: string) => string;
+/* type CutZero = (a: string) => string;
 type RemoveDash = (a: string) => number;
 
 let cutZero: CutZero = (s) => {
@@ -209,3 +209,78 @@ console.log(
     "🚀 ~ file: index.ts:207 ~ 만들함수('010-1111-2222', cutZero, removeDash):",
     만들함수("010-1111-2222", cutZero, removeDash)
 );
+ */
+
+/* let 제목 = document.querySelector('#title')
+
+if(제목?.innerHTML != undefined){
+    제목.innerHTML = '반가워요'
+} */
+
+/* let 이미지 = document.querySelector("#image");
+
+if(이미지 instanceof HTMLImageElement){
+    이미지.src = 'test1.jpg'
+} */
+/* if (링크 instanceof HTMLAnchorElement) {
+    링크.href = "https://kakao.om";
+} */
+
+/* let 링크들 = document.querySelectorAll(".naver");
+console.log("🚀 ~ file: index.ts:230 ~ 링크들:", 링크들);
+
+링크들.forEach((item) => {
+    if (item instanceof HTMLAnchorElement) {
+        item.href = 'https://kakao.com'
+    }
+});
+ */
+
+/* class Person {
+    name: string;
+    constructor(a: string) {
+        this.name = a;
+    }
+    함수(a: string) {
+        console.log("안녕" + a);
+    }
+}
+
+let 사람1 = new Person("kim");
+let 사람2 = new Person("lim");
+
+class Car {
+    model: string;
+    price: number;
+    constructor(a: string, b: number) {
+        this.model = a;
+        this.price = b;
+    }
+    tax(): number {
+        return this.price / 10;
+    }
+}
+
+let car1 = new Car("소나타", 3000);
+console.log(car1); //콘솔창 출력결과는 { model : '소나타', price : 3000 }
+console.log(car1.tax()); //콘솔창 출력결과는 300 */
+
+class Word {
+    num: number[] = [];
+    str: string[] = [];
+    constructor(...a: (string | number)[]) {
+        a.forEach((item) => {
+            if (typeof item == "number") {
+                let num = this.num.push(item);
+                return num
+            } else if (typeof item == "string") {
+                let str = this.str.push(item);
+                return str
+            }
+        });
+    }
+}
+
+let obj = new Word("kim", 3, 5, "park");
+console.log(obj.num); //[3,5]
+console.log(obj.str); //['kim', 'park']
