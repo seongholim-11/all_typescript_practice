@@ -197,9 +197,9 @@ let removeDash: RemoveDash = (str) => {
     return Number(str.replace(/-/g, ""));
 };
 
-type MadeF = (a: string, b: "cutZero", c: "removeDash") => number;
+type MadeF = (a: string, b: CutZero, c: RemoveDash) => number;
 
-const 만들함수 = (a, b, c) => {
+const 만들함수: MadeF = (a, b, c) => {
     let first = b(a);
     let second = c(first);
     return second;
