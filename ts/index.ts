@@ -114,7 +114,7 @@ let position: NewType = {
 };
  */
 
-type PositionX = { x: number };
+/* type PositionX = { x: number };
 type PositionY = { x: number };
 
 type NewType = PositionX & PositionY;
@@ -133,3 +133,79 @@ type Bcd = {
 };
 
 const qwe: Bcd = { name: "kim", phone: 123, email: "abc@naver.com", ch:true };
+ */
+
+/* let 이름: "kim";
+let 접니다: "대머리" | "솔로";
+접니다 = "대머리";
+
+function name1(params: "hello"): 1 | 0 {
+    return;
+}
+
+function gbb(a: "가위" | "바위" | "보"): ("가위" | "바위" | "보")[] {
+    return ["가위"];
+}
+
+var 자료 = {
+    name: "kim",
+} as const4;
+
+function 내함수(a: 'kim'){
+
+}
+
+내함수(자료.name) */
+/* 
+type 함수타입 = (a: string) => number;
+
+const 함수: 함수타입 = function (a) {
+    return 10;
+};
+
+let 회원정보: Member = {
+    name: "kim",
+};
+
+type Member = {
+    name : string,
+    age : number,
+    plusOne : ( x :number ) => number,
+    changeName : () => void
+  }
+
+function 함수1(a) {
+    a();
+}
+
+function 함수2() {}
+
+함수1(함수2); */
+
+type CutZero = (a: string) => string;
+type RemoveDash = (a: string) => number;
+
+let cutZero: CutZero = (s) => {
+    const str = s.substr(0, 1);
+    if (str === "0") {
+        return s.replace("0", "");
+    } else {
+        return s;
+    }
+};
+let removeDash: RemoveDash = (str) => {
+    return Number(str.replace(/-/g, ""));
+};
+
+type MadeF = (a: string, b: "cutZero", c: "removeDash") => number;
+
+const 만들함수 = (a, b, c) => {
+    let first = b(a);
+    let second = c(first);
+    return second;
+};
+
+console.log(
+    "🚀 ~ file: index.ts:207 ~ 만들함수('010-1111-2222', cutZero, removeDash):",
+    만들함수("010-1111-2222", cutZero, removeDash)
+);
