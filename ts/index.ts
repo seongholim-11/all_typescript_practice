@@ -265,7 +265,7 @@ let car1 = new Car("소나타", 3000);
 console.log(car1); //콘솔창 출력결과는 { model : '소나타', price : 3000 }
 console.log(car1.tax()); //콘솔창 출력결과는 300 */
 
-class Word {
+/* class Word {
     num: number[] = [];
     str: string[] = [];
     constructor(...a: (string | number)[]) {
@@ -284,3 +284,65 @@ class Word {
 let obj = new Word("kim", 3, 5, "park");
 console.log(obj.num); //[3,5]
 console.log(obj.str); //['kim', 'park']
+ */
+
+/* interface Square {
+    color: string;
+    width: number;
+}
+let 네모: Square = { color: "red", width: 100 };
+
+interface Stu {
+    name: string;
+}
+interface Stu {
+    score: number;
+}
+interface Tea extends Stu{
+    age: number;
+}
+
+let 선생:Cat={name: '123', age: 20}
+
+type Animal = {name: string}
+type Cat = {age: number} & Animal */
+
+interface Pro {
+    brand: string;
+    serialNumber: number;
+    model: string[];
+}
+
+let 상품: Pro = {
+    brand: "Samsung",
+    serialNumber: 1360,
+    model: ["TV", "phone"],
+};
+
+let 장바구니:Cart[] = [
+    { product : '청소기', price : 7000, card : false },
+    { product : '청소기', price : 7000, card : false },
+];
+
+interface Card{
+    card: boolean
+}
+
+interface Cart extends Card {
+    product: string;
+    price: number;
+}
+
+interface Calculation{
+    plus:(a:number, b:number)=>number,
+    minus:(a:number, b:number)=>number,
+}
+
+let 오브젝트 :Calculation = {
+    plus(a,b){
+      return a + b
+    },
+    minus(a,b){
+      return a - b
+    }
+  } 
