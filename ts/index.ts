@@ -307,7 +307,7 @@ let 선생:Cat={name: '123', age: 20}
 type Animal = {name: string}
 type Cat = {age: number} & Animal */
 
-interface Pro {
+/* interface Pro {
     brand: string;
     serialNumber: number;
     model: string[];
@@ -345,4 +345,208 @@ let 오브젝트 :Calculation = {
     minus(a,b){
       return a - b
     }
-  } 
+  }  */
+
+/* function 함수(...a: number[]) {
+    console.log("🚀 ~ file: index.ts:351 ~ a:", a);
+}
+
+함수(1, 5, 8, 6, 4, 7, 8);
+
+
+let arr = [1,2,3,4];
+
+let [변수1, 변수2] = ['안녕', 100]
+console.log(변수1) */
+
+/* let 오브젝트:Obj = { student: true, age: 20 };
+
+interface Obj{
+    student: boolean,
+    age: number
+}
+
+
+
+function 함수({student, age}:{
+    student: boolean,
+    age: number
+}):void {
+    console.log(student, age);
+}
+
+함수({ student: true, age: 20 });
+ */
+
+/* function max(...a: number[]) {
+    let max;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > a[i + 1]) {
+            max = a[i];
+        }
+    }
+    return max;
+}
+
+console.log("🚀 ~ file: index.ts:392 ~ max(6, 3, 7, 2);:", max(6, 3, 7, 2)) */
+
+/* function 함수({user, comment, admin}:{
+    user: string,
+    comment: number[],
+    admin: boolean
+}):void{
+    console.log(user, comment, admin)
+}
+
+함수( { user : 'kim', comment : [3,5,4], admin : false } ) */
+
+/* type Data = (string|number|boolean)[]
+
+function 함수1([a, b, c]:Data):void{
+    console.log(a,b,c)
+}
+
+함수1([40, 'wine', false]) */
+
+/* function 함수(a: string | undefined){
+    if( a && typeof a === 'string'){
+
+    }else{
+
+    }
+} */
+
+/* type Fish = {swim:string}
+type Bird = {fly:string}
+
+
+function 함수(animal: Fish | Bird){
+    if( 'swim' in animal ){
+        console.log("🚀 ~ file: index.ts:428 ~  animal.swim:",  animal.swim)
+    }
+} */
+
+// 오브젝트 instanceof 부모class
+/* 
+let 날짜 = new Date();
+if (날짜 instanceof Date){
+    
+} */
+
+/* type Car = {
+    wheel: '4개',
+    color: string
+}
+
+type Bike = {
+    wheel: '4개',
+    color: string
+}
+
+function 함수(x:Car | Bike){
+if(x.wheel === '4개'){
+    console.log('x는 car타입이에여')
+}
+}
+
+함수({wheel: '4개', color: 'black'}) */
+
+/* function 함수(parameter: string) {
+    if(typeof parameter == 'string'){
+        console.log(parameter)
+    } else{
+        console.log(parameter)
+    }
+}
+ */
+
+/* class User {
+    name: string;
+    private familyName: string = "kim";
+    constructor(a: string) {
+        this.name = this.familyName + a;
+    }
+    이름변경함수() {
+        this.familyName = "park";
+    }
+}
+
+let 유저1 = new User("민수");
+유저1.이름변경함수();
+console.log("🚀 ~ file: index.ts:472 ~ 유저1:", 유저1);
+
+class Person{
+    constructor(public name: string){
+        
+    }
+}
+
+let 자식 = new Person('kim')
+console.log("🚀 ~ file: index.ts:485 ~ 자식:", 자식) */
+
+/* class User {
+   static x = 10;
+    y = 20;
+}
+
+let 자식 = new User();
+
+console.log(자식.y) */
+
+/* class User {
+    static skill = "js";
+    intro = User.skill + "전문가입니다.";
+}
+
+let 철수1 = new User();
+console.log("🚀 ~ file: index.ts:502 ~ 철수:", 철수1.intro)
+
+User.skill = 'ts'
+
+let 철수2 = new User();
+console.log("🚀 ~ file: index.ts:502 ~ 철수:", 철수2.intro)
+
+let 철수3 = new User();
+console.log("🚀 ~ file: index.ts:502 ~ 철수:", 철수3.intro) */
+
+/* class User {
+    // class 안에서만 수정 가능
+    private static x = 10;
+    // 자식도 수정 가능
+    public static y = 20;
+    // private과 다르게 extends 가능
+    protected z = 30;
+} */
+
+/* class User {
+    private static x: number = 10;
+    public static y: number = 20;
+    addOne(a: number) {
+        User.x = User.x + a;
+    }
+    printX() {
+        console.log(
+            "🚀 ~ file: index.ts:529 ~ User ~ printX ~ User.x:",
+            User.x
+        );
+    }
+}
+
+let one = new User();
+
+one.addOne(3); //이렇게 하면 x가 3 더해져야함
+one.addOne(4); //이렇게 하면 x가 4 더해져야함
+one.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함 */
+
+class Square {
+    constructor(a: number, b: number, c: string) {
+        
+    }
+    draw() {}
+}
+
+let 네모 = new Square(30, 30, "red");
+네모.draw();
+네모.draw();
+네모.draw();
+네모.draw();
