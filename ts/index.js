@@ -505,14 +505,44 @@ let one = new User();
 one.addOne(3); //이렇게 하면 x가 3 더해져야함
 one.addOne(4); //이렇게 하면 x가 4 더해져야함
 one.printX(); //이렇게 하면 콘솔창에 x값이 출력되어야함 */
-var Square = /** @class */ (function () {
-    function Square(a, b, c) {
+/* class Square {
+    a: number;
+    b: number;
+    c: string;
+
+    constructor(a: number, b: number, c: string) {
+        // const div = document.createElement("div");
+        // div.style.width = "300px";
+        // div.style.height = "300px";
+        // div.style.backgroundColor = "blue";
+        // document.body.appendChild(div);
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
-    Square.prototype.draw = function () { };
-    return Square;
-}());
-var 네모 = new Square(30, 30, "red");
+    draw() {
+        const rw: number = Math.random() * 270;
+        const rh: number = Math.random() * 270;
+        const div1 = document.querySelector(".div");
+        div1.style.position = 'relative';
+        const hello = document.createElement("div");
+        hello.style.position = `absolute`;
+        hello.style.width = `${this.a}px`;
+        hello.style.height = `${this.b}px`;
+        hello.style.backgroundColor = this.c;
+        hello.style.top = `${rw}px`;
+        hello.style.left = `${rh}px`;
+        div1.appendChild(hello);
+    }
+}
+
+let 네모 = new Square(30, 30, "red");
 네모.draw();
 네모.draw();
 네모.draw();
-네모.draw();
+네모.draw(); */
+/* ///<reference path="./a.ts"/>
+
+import {Name}  from './a'
+
+let 변수: Name = 'park' */
