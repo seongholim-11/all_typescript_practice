@@ -581,3 +581,54 @@ import {Name}  from './a'
 
 let 변수: Name = 'park' */
 
+/* function 함수<MYType>(x: MYType[]):MYType{
+    return x[0]
+}
+
+let a = 함수<number>([4,2])
+let a1 = 함수<string>(['4','2']) */
+
+
+/* interface LengthCheck{
+    length: number
+}
+
+function fn<MyType extends LengthCheck>(x: MyType){
+    return x.length
+}
+
+let a = fn<string[]>(['100']) */
+
+/* function check<Mytype extends string[]>(a:Mytype):void{
+    let length:number = a.length
+    return console.log(length)
+}
+
+check<string[]>(['hello', '123']) */
+
+/* interface Animal {
+    name : string;
+    age : number 
+  }
+  
+  let data = '{"name" : "dog", "age" : 1 }'
+
+  const t = ex<Animal>(data)
+  console.log("🚀 ~ file: index.ts:617 ~ t:", t)
+
+  function ex<myType>(a: string){
+    let ace:myType = JSON.parse(a)
+    return ace
+  } */
+
+  class Person<MyType> {
+    name:MyType;
+    constructor(a:MyType){
+      this.name = a;
+    }
+  }
+  let a = new Person<number>(123);
+  a.name //any 타입이 되었넹 
+
+
+
