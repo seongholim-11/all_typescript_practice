@@ -581,11 +581,65 @@ check<string[]>(['hello', '123']) */
     let ace:myType = JSON.parse(a)
     return ace
   } */
-var Person = /** @class */ (function () {
-    function Person(a) {
-        this.name = a;
+/*   class Person<MyType> {
+    name:MyType;
+    constructor(a:MyType){
+      this.name = a;
     }
-    return Person;
-}());
-var a = new Person(123);
-a.name; //any 타입이 되었넹 
+  }
+  let a = new Person<number>(123);
+  a.name //any 타입이 되었넹  */
+/*
+let 멍멍 :(string | boolean)[] = ['dog', 'cat']
+let 멍멍1 :[string, boolean, number?] = ['dog', true]
+
+function fn(...x:number[]){
+    console.log(x)
+}
+
+fn(1,2,3,4,5)
+
+let arr = [1,2,3]
+let arr2:[number, number, ...number[]] = [4,5, ...arr]
+console.log("🚀 ~ file: index.ts:644 ~ arr2:", arr2) */
+// let arr:[string, number, boolean] = ['한우', 120000, true]
+/* let arr: [string, number, ...boolean[]] = [
+    "동서녹차",
+    4000,
+    true,
+    false,
+    true,
+    true,
+    false,
+    true,
+];
+
+type fn = (a: string, b: boolean, c: number | string) => void;
+
+const 함수 = (...rest:[string, boolean, ...(number | string)[]]) => {};
+ */
+/* function 함수(...rest: (number | string)[]) {
+    let arr: string[] = [];
+    let arr2: number[] = [];
+
+    rest.forEach((element) => {
+        if (typeof element === "string") {
+            arr.push(element);
+        } else {
+            arr2.push(element);
+        }
+    });
+
+    let arr3: (string[] | number[])[] = [arr, arr2];
+
+    return arr3;
+}
+
+const a = 함수("b", 2, 4, 5, "t");
+console.log("🚀 ~ file: index.ts:681 ~ a:", a); */
+/* import {a} from './data'
+
+console.log(a+1)
+
+let b:Dog = 'kim' */
+var 이름 = '김';
