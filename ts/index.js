@@ -7,12 +7,3 @@
 }
 
 console.log(hiname('홍길동')); */
-var obj = {
-    'font-size': 10,
-    'secondary': {
-        'font-size': 12,
-        'third': {
-            'font-size': 14
-        }
-    }
-};

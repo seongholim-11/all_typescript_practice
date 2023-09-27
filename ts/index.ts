@@ -732,7 +732,7 @@ let obj: MyType = {
     dealer : '김차장',
   } */
 
-  interface MyType{
+/*   interface MyType{
     'font-size': number,
     [key: string] : number | MyType
   }
@@ -745,4 +745,45 @@ let obj: MyType = {
         'font-size' : 14
       }
     }
-  }
+  } */
+
+/* let obj = {
+    name: "kim",
+};
+
+let a = Object.keys(obj)
+
+console.log(a)
+
+
+interface Person {
+    [key : string] : number
+}
+
+type Personkeys = keyof Person
+
+let b:Personkeys = 'name'
+
+type Car = {
+    color: boolean,
+    model: boolean,
+    price: boolean | number
+}
+
+type TypeChanger<MyType> = {
+    [key in keyof MyType]: string
+}
+
+type 새로운타입 = TypeChanger<Car> */
+
+type Bus = {
+    color: string,
+    model: boolean,
+    price: Number
+}
+
+type Change<My, T> = {
+    [key in keyof My]: T
+}
+
+type new1 = Change<Bus, string>
