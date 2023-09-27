@@ -686,6 +686,63 @@ console.log(a+1)
 
 let b:Dog = 'kim' */
 
-let 이름: Age= '김'
+/* let 이름: Age= '김'
 
 type Age = number
+ */
+
+/* interface StringOnly{
+    // name: string,
+    // age: string,
+    // location: string
+    [key: string]: string
+}
+
+let user: StringOnly ={
+    0: 'kim',
+    1: '20',
+    2: 'seoul'
+}
+
+console.log(user[0]) */
+
+/* interface Mytype{
+    "font-size": Mytype | number
+}
+
+let css:Mytype = {
+    "font-size": {
+        "font-size": {
+            "font-size": 14,
+        },
+    },
+}; */
+
+/* interface MyType{
+    [key: string] : string | number,
+}
+
+let obj: MyType = {
+    model : 'k5',
+    brand : 'kia',
+    price : 6000,
+    year : 2030,
+    date : '6월',
+    percent : '5%',
+    dealer : '김차장',
+  } */
+
+  interface MyType{
+    'font-size': number,
+    [key: string] : number | MyType
+  }
+
+  let obj: MyType = {
+    'font-size' : 10,
+    'secondary' : {
+      'font-size' : 12,
+      'third' : {
+        'font-size' : 14
+      }
+    }
+  }

@@ -1,2 +1,5 @@
-declare let 이름: Age;
-type Age = number;
+interface MyType {
+    'font-size': number;
+    [key: string]: number | MyType;
+}
+declare let obj: MyType;
