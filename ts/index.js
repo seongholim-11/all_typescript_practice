@@ -7,3 +7,5 @@
 }
 
 console.log(hiname('홍길동')); */
+var age1;
+var age2;

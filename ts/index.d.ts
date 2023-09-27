@@ -1,9 +1,3 @@
-type Bus = {
-    color: string;
-    model: boolean;
-    price: Number;
-};
-type Change<My, T> = {
-    [key in keyof My]: T;
-};
-type new1 = Change<Bus, string>;
+type Age<T> = T extends [string, number] ? string : unknown;
+declare let age1: Age<[string, number]>;
+declare let age2: Age<[boolean, number]>;

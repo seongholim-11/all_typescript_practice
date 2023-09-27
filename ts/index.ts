@@ -776,7 +776,7 @@ type TypeChanger<MyType> = {
 
 type 새로운타입 = TypeChanger<Car> */
 
-type Bus = {
+/* type Bus = {
     color: string,
     model: boolean,
     price: Number
@@ -786,4 +786,16 @@ type Change<My, T> = {
     [key in keyof My]: T
 }
 
-type new1 = Change<Bus, string>
+type new1 = Change<Bus, string> */
+
+/* type Age<T> = T extends string ? string : unknown
+let a : Age<string>
+
+type Person<T> = T extends (infer R)[] ? string : unknown
+
+let b:Person<string[]> */
+
+
+type Age<T> = T extends [string, number] ? string : unknown
+let age1 :Age<[string, number]>;
+let age2 :Age<[boolean, number]>;
